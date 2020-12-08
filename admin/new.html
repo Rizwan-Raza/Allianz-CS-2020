@@ -1,0 +1,205 @@
+<?php if (!isset($_SESSION)) {
+    session_start();
+}
+if (
+    isset($_SESSION['admin']) and
+    $_SESSION['admin'] == true
+) {
+    ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>New Blog | Allianz Cyber Security</title>
+    <base href="../" />
+    <?php include "includes/head.inc.php"; ?>
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@3.1.0/css/froala_editor.pkgd.min.css" rel="stylesheet"
+        type="text/css" />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/froala-editor@3.1.0/js/froala_editor.pkgd.min.js"></script>
+    <link rel="stylesheet" href="admin/css/queries.css" />
+    <style>
+        .overlay-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .overlay-loader .preloader-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page Layout here -->
+    <section class="row m-0 p-0">
+        <?php include "includes/sidenav.inc.html" ?>
+
+        <div class="col s12 m9 white m-0 p-0" style="height:100vh;overflow:auto;">
+            <a class="p-2 pb-0 left" href="javascript:toggleNav()"><i class="material-icons text-primary">menu</i></a>
+            <div class="px-4">
+                <h4 class="my-1">New Blog</h4>
+            </div>
+            <div class="border-top-1 grey-border border-lighten-2 mt-2"></div>
+            <div class="grey lighten-5">
+                <div class="p-4">
+                    <form class="px-4" method="post" enctype="multipart/form-data">
+                        <div class="input-field">
+                            <label for="title">Title</label>
+                            <input type="text" name="title" id="title" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="desc">Description</label>
+                            <input type="text" name="desc" id="desc" />
+                        </div>
+                        <div class="input-field">
+                            <label for="keywords">Keywords</label>
+                            <input type="text" name="keywords" id="keywords" />
+                        </div>
+                        <div class="input-field">
+                            <label for="url">Page URL</label>
+                            <input type="text" name="url" id="url" value="https://allianz-cs.com/blog/" />
+                        </div>
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>Choose Featured Image</span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                        <div id="froala-editor"></div>
+                        <br />
+                        <button onclick="getx()" class="btn btn-primary right">Publish Blog</button>
+                        <br />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="queryModal" class="modal">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close waves-effect waves-red btn-flat">Close</button>
+        </div>
+    </div>
+
+    <div class="overlay-loader hide">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php include "includes/scripts.inc.php"; ?>
+    <script src="admin/js/queries.js"></script>
+    <script>
+        var editor = new FroalaEditor('div#froala-editor');
+        $("form").submit(e => {
+            e.preventDefault();
+            $.ajax({
+                url: "admin/services/add-post.php",
+                contentType: false,
+                processData: false,
+                method: "POST",
+                type: "POST",
+                data: new FormData(e.target),
+                beforeSend: () => {
+                    $(".overlay-loader").removeClass("hide");
+                },
+                success: (data, status) => {
+                    var object = JSON.parse(data);
+                    console.log(object);
+                    M.toast({
+                        html: object.message
+                    });
+
+                    if (object.status == "success") {
+                        e.target.reset();
+                        $("#bannerAdd #cta_toggle").prop("checked", false);
+                        M.updateTextFields();
+                    }
+                },
+                error: (data, status) => {
+                    console.log(data, status);
+                },
+                complete: () => {
+                    $(".overlay-loader").addClass("hide");
+                }
+            });
+
+        });
+
+
+        function getx() {
+            console.log(editor.html.get());
+        }
+    </script>
+</body>
+
+</html>
+
+<?php
+} else {
+    header("Location: /admin/?redirect_to=" . $_SERVER['REDIRECT_URL']);
+} ?>
