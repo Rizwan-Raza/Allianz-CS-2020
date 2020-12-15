@@ -25,8 +25,18 @@ function getJson($filepath, $filter = null) {
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="row no-gutters grid mt-50">
+                    <div class="col-sm-12">
+
+                        <div class="p-4 bg-grey text-center align-items-center">
+                            <h4>
+                                Coming soon
+                            </h4>
+                        </div>
+                    </div>
+
                     <?php 
-                    $partners = array_filter(getJson("./data/partners.json"));
+                    // $partners = array_filter(getJson("./data/partners.json"));
+                    $partners = [];
                     ?>
                     <?php foreach($partners as $partner) { ?>
                     <div class="col-lg-3 col-sm-4 col-xs-6">

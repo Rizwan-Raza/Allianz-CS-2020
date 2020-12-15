@@ -21,9 +21,11 @@
       01.COMMON css 
 ===========================*/
 
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+/* @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800"); */
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #121212;
@@ -55,7 +57,7 @@ i, span, a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 600;
   color: #121212;
   margin: 0px;
@@ -3120,7 +3122,7 @@ p {
 
 .navbar-area .navbar .navbar-collapse {
   position: absolute;
-  top: 115%;
+  top: 98%;
   left: 0;
   width: 100%;
   background-color: #f4f6f7;

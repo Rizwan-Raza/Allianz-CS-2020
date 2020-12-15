@@ -1,0 +1,47 @@
+<form id="contact-form" action="assets/contact.php" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-input mt-25">
+                <label>Name <span>*</span></label>
+                <div class="input-items default">
+                    <input name="name" type="text" required>
+                    <i class="lni lni-user"></i>
+                </div>
+            </div> <!-- form input -->
+        </div>
+        <div class="col-md-6">
+            <div class="form-input mt-25">
+                <label>Email <span>*</span></label>
+                <div class="input-items default">
+                    <input type="email" name="email" required>
+                    <i class="lni lni-envelope"></i>
+                </div>
+            </div> <!-- form input -->
+        </div>
+        <div class="col-md-6">
+            <div class="form-input mt-25">
+                <label>Subject <span>*</span></label>
+                <div class="input-items default">
+                    <input name="subject" type="text" required>
+                    <i class="lni lni-help"></i>
+                </div>
+            </div> <!-- form input -->
+        </div>
+        <div class="col-md-12">
+            <div class="form-input mt-25">
+                <label>Message <span>*</span></label>
+                <div class="input-items default">
+                    <textarea name="description" required></textarea>
+
+                    <i class="lni lni-pencil-alt"></i>
+                </div>
+            </div> <!-- form input -->
+        </div>
+        <p class="form-message"></p>
+        <div class="col-md-12">
+            <div class="form-input light-rounded-buttons mt-30">
+                <button class="main-btn light-rounded-two">Send Message</button>
+            </div> <!-- form input -->
+        </div>
+    </div> <!-- row -->
+</form>

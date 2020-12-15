@@ -1,0 +1,82 @@
+<form id="contact-form" action="assets/contact.php" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-input mt-25">
+                <label>Name <span>*</span></label>
+                <div class="input-items default">
+                    <input name="name" type="text" required>
+                    <i class="lni lni-user"></i>
+                </div>
+            </div> <!-- form input -->
+        </div>
+        <div class="col-md-6">
+            <div class="form-input mt-25">
+                <label>Email <span>*</span></label>
+                <div class="input-items default">
+                    <input type="email" name="email" required>
+                    <i class="lni lni-envelope"></i>
+                </div>
+            </div> <!-- form input -->
+        </div>
+        <div class="col-md-6">
+            <div class="form-input mt-25">
+                <label>Company / Organisation <span>*</span></label>
+                <div class="input-items default">
+                    <input name="company" type="text" required>
+                    <i class="lni lni-apartment"></i>
+                </div>
+            </div> <!-- form input -->
+        </div>
+        <div class="col-md-6">
+            <div class="form-input mt-25">
+                <label>Product <span>*</span></label>
+                <div class="input-items default">
+                    <input type="text" name="product" required>
+                    <i class="lni lni-package"></i>
+                </div>
+            </div> <!-- form input -->
+        </div>
+        <div class="col-md-6">
+            <div class="form-input mt-25">
+                <label>Serial no.</label>
+                <div class="input-items default">
+                    <input type="number" name="serial_no">
+                    <i class="lni lni-ticket"></i>
+                </div>
+            </div> <!-- form input -->
+        </div>
+        <div class="col-md-12">
+            <div class="form-input mt-25">
+                <label>Problem Statement <span>*</span></label>
+                <div class="input-items default">
+                    <textarea name="description" required></textarea>
+
+                    <i class="lni lni-pencil-alt"></i>
+                </div>
+            </div> <!-- form input -->
+        </div>
+        <div class="col-md-12">
+            <div class="form-input mt-25">
+                <label>Attchment (if any)</label>
+                <div class="input-items default custom-file">
+                    <input type="file" class="custom-file-input" name="attachments" accept="images/*" multiple>
+                    <span class="custom-file-label">Choose file...</span>
+                </div>
+            </div>
+            <!-- <div class="form-input mt-25">
+                <label>Attchment (if any)</label>
+                <div class="input-items">
+                    <input type="file" name="attachments" accept="images/*"
+                        class="custom-file-input">
+                    <i class="lni lni-image"></i>
+                </div>
+            </div> <!- - form input - -> -->
+        </div>
+        <p class="form-message"></p>
+        <div class="col-md-12">
+            <div class="form-input light-rounded-buttons mt-30">
+                <button class="main-btn light-rounded-two">Submit</button>
+            </div> <!-- form input -->
+        </div>
+    </div> <!-- row -->
+</form>

@@ -108,6 +108,10 @@
             -o-transform: skewX(20deg);
             /* transform: skewX(20deg); */
         }
+
+        .card>div {
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -136,211 +140,466 @@
             <br />
             <br />
             <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Computer Forensics</h4>
-                </li>
-                <li class="list-group-item">Forensic Toolkit (FTK)</li>
-                <li class="list-group-item">Forensic Explorer (FEX)</li>
-                <li class="list-group-item">Data Recovery System (DRS)</li>
-                <li class="list-group-item">X-Ways Forensics</li>
-                <li class="list-group-item">Paladin</li>
-                <li class="list-group-item">Carbon</li>
-            </ul>
+            <div id="accordion">
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne">
+                        <div class="card-header" id="headingOne">
+                            <h4 class="fw-500 primary-text">Computer Forensics</h4>
+                        </div>
+                    </div>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Forensic Toolkit (FTK)</li>
+                                <li class="list-group-item">Forensic Explorer (FEX)</li>
+                                <li class="list-group-item">Data Recovery System (DRS)</li>
+                                <li class="list-group-item">X-Ways Forensics</li>
+                                <li class="list-group-item">Paladin</li>
+                                <li class="list-group-item">Carbon</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                        aria-controls="collapseTwo">
+                        <div class="card-header" id="headingTwo">
+                            <h4 class="fw-500 primary-text">Mac Forensics</h4>
+                        </div>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Recon Imager</li>
+                                <li class="list-group-item">Recon Triage</li>
+                                <li class="list-group-item">Recon Lab</li>
+                                <li class="list-group-item">Recon ITR</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Mac Forensics</h4>
-                </li>
-                <li class="list-group-item">Recon Imager</li>
-                <li class="list-group-item">Recon Triage</li>
-                <li class="list-group-item">Recon Lab</li>
-                <li class="list-group-item">Recon ITR</li>
-            </ul>
+                <br />
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
+                        aria-controls="collapseThree">
+                        <div class="card-header" id="headingThree">
+                            <h4 class="fw-500 primary-text">E-Discovery</h4>
+                        </div>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">E-Discovery</h4>
-                </li>
-            </ul>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">DVR Forensics</h4>
-                </li>
-                <li class="list-group-item">Video Investigation Portable (VIP)</li>
-            </ul>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Network Forensics</h4>
-                </li>
-                <li class="list-group-item">NetworkMiner</li>
-            </ul>
+                <br />
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Incident Response</h4>
-                </li>
-                <li class="list-group-item">Cyber Triage</li>
-            </ul>
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseFour" aria-expanded="true"
+                        aria-controls="collapseFour">
+                        <div class="card-header" id="headingFour">
+                            <h4 class="fw-500 primary-text">DVR Forensics</h4>
+                        </div>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Video Investigation Portable (VIP)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Mobile Device Forensics</h4>
-                </li>
-                <li class="list-group-item">MOBILedit</li>
-            </ul>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Advanced Mobile Security</h4>
-                </li>
-                <li class="list-group-item">Mobile Device Security (zIPS)</li>
-                <li class="list-group-item">Mobile Application Analysis (z3A)</li>
-                <li class="list-group-item">Mobile App Obfuscation and Anti-tampering (zSHIELD)</li>
-                <li class="list-group-item">Mobile Application Security Testing (zScan)</li>
-                <li class="list-group-item">Embedded App Protection (zDefend)</li>
-                <li class="list-group-item">Mobile Application Protection Suite (MAPS)</li>
-            </ul>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Decryption Tools / Password Breaking Tools</h4>
-                </li>
-            </ul>
+                <br />
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Video Forensics</h4>
-                </li>
-            </ul>
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseFive" aria-expanded="true"
+                        aria-controls="collapseFive">
+                        <div class="card-header" id="headingFive">
+                            <h4 class="fw-500 primary-text">Network Forensics</h4>
+                        </div>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">NetworkMiner</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Audio Forensics</h4>
-                </li>
-            </ul>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Cloud Forensics</h4>
-                </li>
-            </ul>
+                <br />
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseSix" aria-expanded="true"
+                        aria-controls="collapseSix">
+                        <div class="card-header" id="headingSix">
+                            <h4 class="fw-500 primary-text">Incident Response</h4>
+                        </div>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Cyber Triage</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Social Media</h4>
-                </li>
-            </ul>
 
-            <br />
-            <ul class="list-group mb-2">
+                <br />
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true"
+                        aria-controls="collapseSeven">
+                        <div class="card-header" id="headingSeven">
+                            <h4 class="fw-500 primary-text">Mobile Device Forensics</h4>
+                        </div>
+                    </div>
+                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">MOBILedit</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Forensic Workstation</h4>
-                </li>
-                <li class="list-group-item">Talino KA-AMD</li>
-                <li class="list-group-item">Talino KA-101</li>
-                <li class="list-group-item">Talino KA-301</li>
-                <li class="list-group-item">Talino KA-501</li>
-                <li class="list-group-item">Talino KA-701X</li>
-                <li class="list-group-item">Talino KA-901X</li>
-            </ul>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Ediscovery Workstation</h4>
-                </li>
-                <li class="list-group-item">Talino KA-L eDiscovery & Incident Response</li>
-                <li class="list-group-item">Talino KA-3001</li>
-                <li class="list-group-item">Talino KA-3003</li>
-            </ul>
+                <br />
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseEight" aria-expanded="true"
+                        aria-controls="collapseEight">
+                        <div class="card-header" id="headingEight">
+                            <h4 class="fw-500 primary-text">Advanced Mobile Security</h4>
+                        </div>
+                    </div>
+                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Mobile Device Security (zIPS)</li>
+                                <li class="list-group-item">Mobile Application Analysis (z3A)</li>
+                                <li class="list-group-item">Mobile App Obfuscation and Anti-tampering (zSHIELD)</li>
+                                <li class="list-group-item">Mobile Application Security Testing (zScan)</li>
+                                <li class="list-group-item">Embedded App Protection (zDefend)</li>
+                                <li class="list-group-item">Mobile Application Protection Suite (MAPS)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Cryptanalysis Workstation</h4>
-                </li>
-                <li class="list-group-item">TALINO KA-1001</li>
-                <li class="list-group-item">TALINO KA-1002</li>
-            </ul>
+                <br />
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseNine" aria-expanded="true"
+                        aria-controls="collapseNine">
+                        <div class="card-header" id="headingNine">
+                            <h4 class="fw-500 primary-text">Decryption Tools / Password Breaking Tools</h4>
+                        </div>
+                    </div>
+                    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Forensic Laptop</h4>
-                </li>
-                <li class="list-group-item">Talino KA-L Alpha</li>
-                <li class="list-group-item">Talino KA-L Gamma</li>
-                <li class="list-group-item">Talino KA-L Omega</li>
-            </ul>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">CD and DVD Forensics</h4>
-                </li>
-            </ul>
+                <br />
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseTen" aria-expanded="true"
+                        aria-controls="collapseTen">
+                        <div class="card-header" id="headingTen">
+                            <h4 class="fw-500 primary-text">Video Forensics</h4>
+                        </div>
+                    </div>
+                    <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Digital Forensics Analytics</h4>
-                </li>
-            </ul>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Wireless Device Shielding</h4>
-                </li>
-            </ul>
+                <br />
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseEleven" aria-expanded="true"
+                        aria-controls="collapseEleven">
+                        <div class="card-header" id="headingEleven">
+                            <h4 class="fw-500 primary-text">Audio Forensics</h4>
+                        </div>
+                    </div>
+                    <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Forensic Bridge</h4>
-                </li>
-            </ul>
+                <br />
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="true"
+                        aria-controls="collapseTwelve">
+                        <div class="card-header" id="headingTwelve">
+                            <h4 class="fw-500 primary-text">Cloud Forensics</h4>
+                        </div>
+                    </div>
+                    <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            <br />
-            <ul class="list-group mb-2">
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Portable Seizure Kit</h4>
-                </li>
-            </ul>
 
-            <br />
-            <ul class="list-group mb-2">
+                <br />
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="true"
+                        aria-controls="collapseThirteen">
+                        <div class="card-header" id="headingThirteen">
+                            <h4 class="fw-500 primary-text">Social Media</h4>
+                        </div>
+                    </div>
+                    <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen"
+                        data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-                <li class="list-group-item header">
-                    <h4 class="fw-500 primary-text">Forensic Imager</h4>
-                </li>
-            </ul>
-            <br />
-            <br />
+                <br />
+
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="true"
+                        aria-controls="collapseFourteen">
+                        <div class="card-header" id="headingFourteen">
+                            <h4 class="fw-500 primary-text">Forensic Workstation</h4>
+                        </div>
+                    </div>
+                    <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen"
+                        data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Talino KA-AMD</li>
+                                <li class="list-group-item">Talino KA-101</li>
+                                <li class="list-group-item">Talino KA-301</li>
+                                <li class="list-group-item">Talino KA-501</li>
+                                <li class="list-group-item">Talino KA-701X</li>
+                                <li class="list-group-item">Talino KA-901X</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="true"
+                        aria-controls="collapseFifteen">
+                        <div class="card-header" id="headingFifteen">
+                            <h4 class="fw-500 primary-text">Ediscovery Workstation</h4>
+                        </div>
+                    </div>
+                    <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen"
+                        data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Talino KA-L eDiscovery & Incident Response</li>
+                                <li class="list-group-item">Talino KA-3001</li>
+                                <li class="list-group-item">Talino KA-3003</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="true"
+                        aria-controls="collapseSixteen">
+                        <div class="card-header" id="headingSixteen">
+                            <h4 class="fw-500 primary-text">Cryptanalysis Workstation</h4>
+                        </div>
+                    </div>
+                    <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen"
+                        data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">TALINO KA-1001</li>
+                                <li class="list-group-item">TALINO KA-1002</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <br />
+
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseSeventeen" aria-expanded="true"
+                        aria-controls="collapseSeventeen">
+                        <div class="card-header" id="headingSeventeen">
+                            <h4 class="fw-500 primary-text">Forensic Laptop</h4>
+                        </div>
+                    </div>
+                    <div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen"
+                        data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Talino KA-L Alpha</li>
+                                <li class="list-group-item">Talino KA-L Gamma</li>
+                                <li class="list-group-item">Talino KA-L Omega</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+
+
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseEighteen" aria-expanded="true"
+                        aria-controls="collapseEighteen">
+                        <div class="card-header" id="headingEighteen">
+                            <h4 class="fw-500 primary-text">CD and DVD Forensics</h4>
+                        </div>
+                    </div>
+                    <div id="collapseEighteen" class="collapse" aria-labelledby="headingEighteen"
+                        data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <br />
+
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseNineteen" aria-expanded="true"
+                        aria-controls="collapseNineteen">
+                        <div class="card-header" id="headingNineteen">
+                            <h4 class="fw-500 primary-text">Digital Forensics Analytics</h4>
+                        </div>
+                    </div>
+                    <div id="collapseNineteen" class="collapse" aria-labelledby="headingNineteen"
+                        data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <br />
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseTwenty" aria-expanded="true"
+                        aria-controls="collapseTwenty">
+                        <div class="card-header" id="headingTwenty">
+                            <h4 class="fw-500 primary-text">Wireless Device Shielding</h4>
+                        </div>
+                    </div>
+                    <div id="collapseTwenty" class="collapse" aria-labelledby="headingTwenty" data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseTwentyone" aria-expanded="true"
+                        aria-controls="collapseTwentyone">
+                        <div class="card-header" id="headingTwentyone">
+                            <h4 class="fw-500 primary-text">Forensic Bridge</h4>
+                        </div>
+                    </div>
+                    <div id="collapseTwentyone" class="collapse" aria-labelledby="headingTwentyone"
+                        data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <br />
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseTwentytwo" aria-expanded="true"
+                        aria-controls="collapseTwentytwo">
+                        <div class="card-header" id="headingTwentytwo">
+                            <h4 class="fw-500 primary-text">Portable Seizure Kit</h4>
+                        </div>
+                    </div>
+                    <div id="collapseTwentytwo" class="collapse" aria-labelledby="headingTwentytwo"
+                        data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="card">
+                    <div data-toggle="collapse" data-target="#collapseTwentythree" aria-expanded="true"
+                        aria-controls="collapseTwentythree">
+                        <div class="card-header" id="headingTwentythree">
+                            <h4 class="fw-500 primary-text">Forensic Imager</h4>
+                        </div>
+                    </div>
+                    <div id="collapseTwentythree" class="collapse" aria-labelledby="headingTwentythree"
+                        data-parent="#accordion">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <br />
+            </div>
         </div>
     </section>
-    <?php include "includes/contact.inc.html"; ?>
+    <?php include "includes/contact-section.inc.html"; ?>
     <?php include "includes/footer.inc.html"; ?>
     <?php include "includes/bottomJs.inc.html"; ?>
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
+    <script>
+        $(() => {
+            $(".card").each(function () {
+                if ($(this).find("ul").children().length == 0)
+                    $(this).find("[data-toggle]").css("cursor", "not-allowed");
+            });
 
+            // $(".card-header").hover(
+            //     function () {
+            //         $(this).parents(".card").find('.collapse').collapse('show');
+            //     }, function () {
+            //         $(this).parents(".card").find('.collapse').collapse('hide');
+            //     }
+            // );
+        });
+    </script>
 </body>
 
 </html>
