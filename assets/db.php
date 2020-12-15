@@ -9,6 +9,6 @@ class DB
 
     public static function getConnection()
     {
-        return new mysqli(self::$server, self::$username, self::$password, self::$dbname);
+        return new mysqli(self::$server, self::$username, self::$password, self::$dbname, "3306");
     }
 }

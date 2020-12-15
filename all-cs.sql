@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Dec 07, 2020 at 08:29 PM
+-- Generation Time: Dec 08, 2020 at 01:15 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.3.21
 
@@ -35,7 +35,14 @@ CREATE TABLE IF NOT EXISTS `admins` (
   `password` varchar(36) NOT NULL,
   `time` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`_aid`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`_aid`, `name`, `username`, `password`, `time`) VALUES
+(1, 'Administrator', 'admin', 'ccb27d326aa5997fdfdb45b700acc8c3', '2020-12-08 13:15:25');
 
 -- --------------------------------------------------------
 

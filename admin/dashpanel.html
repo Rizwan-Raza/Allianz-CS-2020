@@ -17,7 +17,7 @@ if (isset($_SESSION['admin']) and $_SESSION['admin'] == true) {
     <section class="row m-0 p-0">
 
         <?php include "includes/sidenav.inc.html";
-        require_once "../services/db.inc.php"; 
+        require_once "../assets/db.php"; 
 
         $sql = "SELECT COUNT(`_qid`) FROM `queries`"; 
         $conn = DB::getConnection(); 

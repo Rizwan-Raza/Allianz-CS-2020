@@ -5,8 +5,13 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" and isset($_POST['username']) and isse
     extract($_POST, EXTR_SKIP);
 
     $sql = "SELECT `_aid`, `name`, `username` FROM `admins` WHERE `username`='$username' AND `password`=MD5('*Rex*$password*Rex*')";
-    require '../../services/db.inc.php';
+    require '../../assets/db.php';
     $conn = DB::getConnection();
+    if (!$conn) {
+        $data = array("message" => "Database Connection Error", "status" => "server_error", "error" => $conn->error);
+        echo json_encode($data);
+        return;
+    }
     $result = $conn->query($sql);
     if ($result != false) {
         if ($result->num_rows > 0) {
@@ -25,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" and isset($_POST['username']) and isse
         }
     } else {
         // echo $conn->error;
-        $data = array("message" => "Something went wrong!", "status" => "server_error");
+        $data = array("message" => "Something went wrong!", "status" => "server_error", "error" => $conn->error, "sql" => $sql, "rError" => $result, "conErrro" => $conn->connect_error);
     }
 }
 echo json_encode($data);

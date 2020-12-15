@@ -29,7 +29,7 @@ if (
             <div class="border-top-1 grey-border border-lighten-2 mt-2"></div>
             <div class="grey lighten-3">
                 <?php $sql = "SELECT * FROM `blogs` ORDER BY `time` DESC";
-                    require "../services/db.inc.php";
+                    require "../assets/db.php";
                     $conn =
                         DB::getConnection();
                     $result = $conn->query($sql); ?>

@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     // $data = array("message" => $sql, "status" => "success");
     // echo json_encode($data);
     // return;
-    require '../../services/db.inc.php';
+    require '../../assets/db.php';
     $conn = DB::getConnection();
     $result = $conn->query($sql);
     if ($result == true) {

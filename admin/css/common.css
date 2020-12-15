@@ -37,7 +37,7 @@ body {
 .input-field input:focus+label,
 .input-field textarea:focus+label,
 .input-field .prefix.active {
-    color: #002747 !important;
+    color: #1a237e !important;
 }
 
 /* label underline focus color */
