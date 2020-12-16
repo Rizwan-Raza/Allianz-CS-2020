@@ -199,19 +199,8 @@ $(function () {
 
     //===== 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
+
+function openChat() {
+    $("iframe[title='chat widget']").contents().find("#maximizeChat").trigger("click");
+}
