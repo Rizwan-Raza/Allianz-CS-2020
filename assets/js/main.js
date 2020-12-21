@@ -47,6 +47,7 @@ $(function () {
     // $(".navbar-nav a").on('click', function () {
     //     $(".navbar-collapse").removeClass("show");
     // });
+    // $(".navbar-toggler").unbind("click");
 
     $(".navbar-toggler").on('mouseenter', function () {
         $(this).addClass("active");
